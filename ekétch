@@ -1,0 +1,40 @@
+let cor;
+let Horizontal;  //y
+let Verical; //x
+
+function setup() {
+
+  createCanvas(400, 400);
+  background("purple");
+  cor = color(random(0, 255), random(0, 255), random(0,255))
+  Horizontal = 200;
+  Vertical = 200;
+}
+
+function draw() {
+
+fill(cor);
+circle(Horizontal,Vertical, 50);
+
+ if(mouseX < Horizontal) {
+   Horizontal = Horizontal - 1;
+}
+   
+   if(mouseX > Horizontal) {
+  Horizontal = Horizontal + 1;
+  }
+  
+  if(mouseY < Vertical) {
+    Vertical--;
+  }
+  
+  if(mouseY > Vertical) {
+    Vertical++;
+    }
+      
+   if(mouseIsPressed) {
+   cor = color(random(0, 255), random(0, 255), random(0, 255), random(0, 100))
+    }
+    
+   }
+     
